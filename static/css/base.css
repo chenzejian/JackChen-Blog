@@ -1,0 +1,51 @@
+body{
+    background: #F5F5F5;
+}
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { 
+    font-family: Microsoft YaHei;
+}
+.navbar {
+    font-size:16px;
+}
+.navbar-default {
+    background: #CFCFCF;
+    border-color: #CFCFCF;
+}
+.navbar .container {
+    padding-right: 50px;
+}
+.navbar .navbar-collapse {
+    padding-right: 0px;
+}
+.navbar ul.nav{
+    padding-top: 15px;
+}
+
+.navbar ul.logo{
+    padding-top: 0px;
+}
+
+.container{
+    width: 86%;
+}
+
+.container .left-container{
+    float: left;
+    width: 22%;
+    margin: 10px;
+}
+
+.container .right-container{
+    float: left;
+    width: 22%;
+    margin: 10px;
+}
+
+.container .left-container .list-group a{
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.container .left-container a:hover{
+    color: #32A5E7;
+}

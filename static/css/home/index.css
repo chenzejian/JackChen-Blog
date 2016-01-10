@@ -1,0 +1,10 @@
+.content-container{
+    float: left;
+    width:50%;
+    margin: 10px;
+}
+
+.container .breadcrumb{
+    margin-bottom: 0px;
+    font-size: 15px;
+}
