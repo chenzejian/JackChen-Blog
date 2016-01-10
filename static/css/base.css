@@ -20,32 +20,48 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
 .navbar ul.nav{
     padding-top: 15px;
 }
-
 .navbar ul.logo{
     padding-top: 0px;
 }
-
 .container{
     width: 86%;
 }
-
 .container .left-container{
     float: left;
     width: 22%;
     margin: 10px;
 }
-
 .container .right-container{
     float: left;
     width: 22%;
     margin: 10px;
 }
-
-.container .left-container .list-group a{
+.container .left-container .list-group{
     font-size: 16px;
+}
+.container .left-container div.list-group a{
     padding: 15px 20px;
 }
-
 .container .left-container a:hover{
     color: #32A5E7;
+}
+.container .left-container .datepicker{
+    margin-bottom: 20px;
+}
+.container .left-container .about-bloger ul li div{
+    text-align: center;
+    margin: 10px;
+}
+.container .left-container .about-bloger ul li div span.about-bloger-tatus{
+    font-size: 13px;
+    background: #CECECE;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+.container .left-container .about-bloger ul li div span.about-bloger-name a:hover{
+    text-decoration: none;
+}
+.container .left-container .about-bloger ul li p{
+    text-indent:2em;
 }
