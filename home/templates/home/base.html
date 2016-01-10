@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<html>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <head>
+    	{% block head %}
+    	    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}"></script>
+	    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+	    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+    	{% endblock %}
+    </head>
+    <body>
+        {% block navbar %}
+	<div class="navbar navbar-default" role="navigation">
+	    <div class="container">
+	        <div class="navbar-collapse collapse  navbar-left">
+	            <ul class="nav navbar-nav logo">
+	                <li><a href="/"><span class="glyphicon glyphicon-leaf" aria-hidden="true"><img src="{% static 'img/logo.jpg' %}"/></span></a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>&nbsp&nbsp旧版网站</a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp&nbsp关于我们</a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp&nbsp登陆</a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>&nbsp&nbsp注册</a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp&nbsp生活频道</a></li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right dropdown">
+	            <ul class="nav navbar-nav">
+	                <li>
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp&nbspiT科技<span class="caret"></span></a>
+	                    <ul class="dropdown-menu navbar-right">
+	                        <li><a href="#">Action</a></li>
+	                        <li><a href="#">Another action</a></li>
+	                        <li><a href="#">Something else here</a></li>
+	                        <li role="separator" class="divider"></li>
+	                        <li><a href="#">Separated link</a></li>
+	                        <li role="separator" class="divider"></li>
+	                        <li><a href="#">One more separated link</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div>
+	        <div class="navbar-collapse collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp&nbsp首页</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+        {% endblock %}
+        <div class="container">
+            {%block crumb %}{% endblock %}
+            {% block left %}
+                <div class="left-container">
+                    <div class="list-group">
+	           <a href="#" class="list-group-item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp&nbsp首页</a>
+	           <a href="#" class="list-group-item"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp&nbspiT科技</a>
+	           <a href="#" class="list-group-item"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp&nbsp生活频道</a>
+	           <a href="#" class="list-group-item"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>&nbsp&nbsp注册</a>
+	           <a href="#" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp&nbsp关于我们</a>
+	       </div>
+	       <div class="datepicker"></div>
+	   </div>
+            {% endblock %}
+            {%block content %}{% endblock %}
+            {% block right %}
+                <div class="right-container">
+                    <div class="list-group">
+	           <a href="#" class="list-group-item">Cras justo odio</a>
+	           <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+	           <a href="#" class="list-group-item">Morbi leo risus</a>
+	           <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+	           <a href="#" class="list-group-item">Vestibulum at eros</a>
+	       </div>
+	   </div>
+            {% endblock %}
+        </div>  
+        {% block footer %}
+            <h3>嘿，这是继承了模版</h3>
+        {% endblock%}
+    </body>
+</html>

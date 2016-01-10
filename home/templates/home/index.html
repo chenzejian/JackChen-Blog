@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/home/index.css' %}">
+{% endblock %}
+{%block crumb %}
+    <div class="breadcrumb">
+        当前位置：
+        <a href="https://www.iligang.cn/">首页</a>
+         <small>&gt;</small>
+         <span class="current">IT科技</span>
+     </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content-container">
+        <div class="list-group">
+           <a href="#" class="list-group-item">Cras justo odio</a>
+           <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+           <a href="#" class="list-group-item">Morbi leo risus</a>
+           <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+           <a href="#" class="list-group-item">Vestibulum at eros</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <h3>嘿</h3>
+{% endblock %}
