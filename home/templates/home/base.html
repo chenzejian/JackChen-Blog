@@ -94,6 +94,10 @@
 	                   <p>陈泽建博客 | 陈泽建个人博客 http://www.jackchen-blog.com/</p>
 	                   <p>一个专注于Web开发并对技术充满激情的程序猿个人博客网站。http://www.jackchen-blog.com/</p>
 	                   <p>有你更精彩！你们的支持就是我最大的动力！http://www.jackchen-blog.com/</p>
+	                   <div>
+	                   <button type="button" class="btn btn-primary"><a href="http://weibo.com/p/1005052371595927" target="__blank">微博</a></button>
+	                   <button type="button" class="btn btn-success"><a href="http://www.jackchen-blog.com">站点</a></button>
+	                   </div>
 	               </li>
 	           </ul>
 	       </div>
@@ -102,12 +106,46 @@
             {%block content %}{% endblock %}
             {% block right %}
                 <div class="right-container">
-                    <div class="list-group">
-	           <a href="#" class="list-group-item">Cras justo odio</a>
-	           <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-	           <a href="#" class="list-group-item">Morbi leo risus</a>
-	           <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-	           <a href="#" class="list-group-item">Vestibulum at eros</a>
+	       <div class="input-group input-search">
+	           <input type="text" class="form-control" placeholder="Search for...">
+	           <span class="input-group-btn">
+	               <button type="button" class="btn btn-default">
+		      <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 搜索
+		  </button>
+	           </span>
+	       </div>
+	       <div class="graphic-recommendation">
+	           <ul class="list-group">
+	               <li class="list-group-item">图文推荐</li>
+	               <li class="list-group-item pic-content">
+	                   <ul>
+	                       <li>
+	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
+	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
+			  <div>诸多不顺，一点安全感都没有，突然感...</div>
+			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
+	                       </li>
+	                       <li>
+	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
+	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
+			  <div>诸多不顺，一点安全感都没有，突然感...</div>
+			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
+	                       </li>
+	                       <li>
+	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
+	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
+			  <div>诸多不顺，一点安全感都没有，突然感...</div>
+			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
+	                       </li>
+	                       <li>
+	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
+	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
+			  <div>诸多不顺，一点安全感都没有，突然感...</div>
+			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
+	                       </li>
+	                   </ul>
+	               </li>
+	           </ul>
 	       </div>
 	   </div>
             {% endblock %}

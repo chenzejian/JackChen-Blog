@@ -1,8 +1,10 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Microsoft YaHei;
+}
 body{
     background: #F5F5F5;
-}
-body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { 
-    font-family: Microsoft YaHei;
 }
 .navbar {
     font-size:16px;
@@ -27,11 +29,6 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     width: 86%;
 }
 .container .left-container{
-    float: left;
-    width: 22%;
-    margin: 10px;
-}
-.container .right-container{
     float: left;
     width: 22%;
     margin: 10px;
@@ -63,5 +60,42 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 .container .left-container .about-bloger ul li p{
-    text-indent:2em;
+    text-indent: 2em;
 }
+.container .left-container .about-bloger ul li button{
+    margin: 10px;
+}
+.container .left-container .about-bloger ul li button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+.container .right-container{
+    float: left;
+    width: 22%;
+    margin: 10px;
+}
+.container .right-container .input-search{
+    margin-bottom: 20px;
+}
+.container .right-container .graphic-recommendation li.pic-content{
+}
+.container .right-container .graphic-recommendation li.pic-content{
+    float: left;
+}
+.container .right-container .graphic-recommendation li.pic-content ul li{
+    list-style: none;
+    border-bottom: 1px #DDDDDD solid;
+    float: left;
+    padding: 10px 0 5px 0px;
+}
+.container .right-container .graphic-recommendation li.pic-content ul img.thumbnail{
+    float: left;
+    margin-right: 10px;
+    border: none;
+}
+.container .right-container .graphic-recommendation li.pic-content ul span.glyphicon-time{
+    color: #9A9A9A;
+    top: 2px;
+}
+
