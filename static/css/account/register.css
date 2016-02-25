@@ -1,0 +1,7 @@
+div.container div.input-group{
+    margin: 20px auto;
+    width: 45%;
+}
+div.container div.input-group button{
+    width: 100%;
+}

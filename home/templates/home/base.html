@@ -8,7 +8,7 @@
 	    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 	    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
 	    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}"></script>
-	    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/home/base.css' %}">
 	    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 	    <script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
@@ -26,7 +26,7 @@
 	        </div>
 	        <div class="navbar-collapse collapse navbar-right">
 	            <ul class="nav navbar-nav">
-	                <li><a href="/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>&nbsp&nbsp旧版网站</a></li>
+	                <li><a href="/"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>&nbsp&nbsp{{foo}}</a></li>
 	            </ul>
 	        </div>
 	        <div class="navbar-collapse collapse navbar-right">
@@ -41,7 +41,7 @@
 	        </div>
 	        <div class="navbar-collapse collapse navbar-right">
 	            <ul class="nav navbar-nav">
-	                <li><a href="/"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>&nbsp&nbsp注册</a></li>
+	                <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>&nbsp&nbsp注册</a></li>
 	            </ul>
 	        </div>
 	        <div class="navbar-collapse collapse navbar-right">
@@ -119,30 +119,14 @@
 	               <li class="list-group-item">图文推荐</li>
 	               <li class="list-group-item pic-content">
 	                   <ul>
+	                      {% for post in article_list %}
 	                       <li>
 	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
-	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
-			  <div>诸多不顺，一点安全感都没有，突然感...</div>
-			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
+	                   	  <div ><a href="/read/121215224600.shtml">{{  post.title }}</a></div>
+			  <div>{{  post.content }}</div>
+			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{  post.created }}</div>
 	                       </li>
-	                       <li>
-	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
-	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
-			  <div>诸多不顺，一点安全感都没有，突然感...</div>
-			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
-	                       </li>
-	                       <li>
-	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
-	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
-			  <div>诸多不顺，一点安全感都没有，突然感...</div>
-			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
-	                       </li>
-	                       <li>
-	                           <a href="#"><img src="{% static 'img/tuwen.jpg' %}" alt="我害怕" title="我害怕" class="thumbnail"></a>
-	                   	  <div ><a href="/read/121215224600.shtml">我害怕</a></div>
-			  <div>诸多不顺，一点安全感都没有，突然感...</div>
-			  <div><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2012-12-15 22:46</div>
-	                       </li>
+	                       {% endfor %}
 	                   </ul>
 	               </li>
 	           </ul>

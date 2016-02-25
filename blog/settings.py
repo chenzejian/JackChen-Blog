@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'account',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -79,8 +80,30 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'jackchen_blog',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     },
+# }
+# DATABASES = {
+#     'default': {
+#         'NAME': 'jackchen_blog',
+#         'ENGINE': 'django.db.backends.mysql',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'OPTIONS': {
+#           'autocommit': True,
+#         },
+#     }
+# }
 
 
 # Password validation
@@ -124,3 +147,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 TEMPLATES_ROOT = os.path.join(BASE_DIR, "templates/")
+
+

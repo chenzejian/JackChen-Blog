@@ -1,0 +1,29 @@
+{% extends "account/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/account/register.css' %}">
+    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'register' %}" method="POST" id="register">
+        {% csrf_token %}
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+	{{form.username}}
+        </div>
+        <div class="input-group input-group-lg">
+	<span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+	{{form.password}}
+        </div>
+        <div class="input-group input-group-lg">
+	<span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+	{{form.email}}
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn btn-success" value="asd">注  册</button>
+        </div>
+    </form>
+{% endblock %}
